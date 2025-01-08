@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="WPFBasicMVVM.TitleBarView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFBasicMVVM"
+             mc:Ignorable="d" 
+             d:DesignHeight="40">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ResourceDictionaryBase.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="60"/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="0"
+                Opacity="0"
+                PreviewMouseDown="DragMouseDown"
+                PreviewMouseMove="DragMouseMove"
+                PreviewMouseUp="DragMouseUp"
+                x:Name="DragButton"/>
+        <Button Grid.Column="1"
+                Style="{StaticResource MinimizeButton}"
+                Click="Minimize">
+            <Button.Content>
+                <Image Source="/minimize-icon.png"
+                       Margin="10"/>
+            </Button.Content>
+        </Button>
+        <Button Grid.Column="2"
+                Style="{StaticResource ButtonClose}">
+            <Button.Content>
+                <Image Source="/cross-icon.png"
+                       Margin="10"/>
+            </Button.Content>
+        </Button>
+    </Grid>
+</UserControl>

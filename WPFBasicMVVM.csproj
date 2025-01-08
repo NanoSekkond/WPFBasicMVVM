@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<PackageId>WPFBasicVMMV</PackageId>
+		<Authors>Nano</Authors>
+		<Description>A library for basic WPF components.</Description>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+</Project>
